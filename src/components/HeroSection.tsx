@@ -38,11 +38,6 @@ const HeroSection = () => {
                 <span className="text-sm font-medium text-wildlife-emerald">Available for Collaboration</span>
               </div>
               
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wildlife-gold/10 border border-wildlife-gold/20 backdrop-blur-sm">
-                <div className="w-2 h-2 bg-wildlife-gold rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-wildlife-gold">500+ Research Field Interviews</span>
-              </div>
-              
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-wildlife-ivory">Dr. Simran</span>
                 <br />
