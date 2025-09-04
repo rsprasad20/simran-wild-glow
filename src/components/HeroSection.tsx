@@ -119,6 +119,11 @@ const HeroSection = () => {
                 <div className="text-xs text-muted-foreground">Research Field Interviews</div>
               </div>
               
+              <div className="absolute -top-4 -left-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-wildlife-emerald">5+ Years</div>
+                <div className="text-xs text-muted-foreground">Watching the "Elephas maximus"</div>
+              </div>
+              
               <div className="absolute -bottom-4 -left-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-gold/20 backdrop-blur-sm">
                 <div className="text-2xl font-bold text-wildlife-gold">3+ States</div>
                 <div className="text-xs text-muted-foreground">Study site across the western ghats</div>
