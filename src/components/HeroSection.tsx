@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Instagram, Linkedin, Mail } from "lucide-react";
 import heroConstellation from "@/assets/hero-constellation.jpg";
 
 const HeroSection = () => {
@@ -91,10 +91,12 @@ const HeroSection = () => {
                 <Mail className="h-5 w-5 text-wildlife-emerald group-hover:text-wildlife-ivory" />
               </a>
               <a 
-                href="#"
+                href="https://www.instagram.com/simran__prasad/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-full bg-wildlife-emerald/10 border border-wildlife-emerald/20 hover:bg-wildlife-emerald/20 smooth-transition group"
               >
-                <Github className="h-5 w-5 text-wildlife-emerald group-hover:text-wildlife-ivory" />
+                <Instagram className="h-5 w-5 text-wildlife-emerald group-hover:text-wildlife-ivory" />
               </a>
             </div>
           </div>
