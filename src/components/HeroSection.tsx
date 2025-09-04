@@ -43,11 +43,6 @@ const HeroSection = () => {
                 <span className="text-sm font-medium text-wildlife-gold">500+ Research Field Interviews</span>
               </div>
               
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wildlife-emerald/10 border border-wildlife-emerald/20 backdrop-blur-sm">
-                <div className="w-2 h-2 bg-wildlife-emerald rounded-full animate-pulse" />
-                <span className="text-sm font-medium text-wildlife-emerald">5+ years watching Indian Elephants</span>
-              </div>
-              
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-wildlife-ivory">Dr. Simran</span>
                 <br />
