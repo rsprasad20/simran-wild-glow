@@ -54,6 +54,14 @@ const HeroSection = () => {
               to understand and protect our planet's most vulnerable ecosystems.
             </p>
             
+            {/* Elephant Experience Badge */}
+            <div className="flex justify-center lg:justify-start mb-4">
+              <div className="bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
+                <div className="text-2xl font-bold text-wildlife-emerald">5+ Years</div>
+                <div className="text-xs text-muted-foreground">Watching the "Elephas maximus"</div>
+              </div>
+            </div>
+            
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
@@ -117,11 +125,6 @@ const HeroSection = () => {
               <div className="absolute -top-4 -right-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
                 <div className="text-2xl font-bold text-wildlife-emerald">500+</div>
                 <div className="text-xs text-muted-foreground">Research Field Interviews</div>
-              </div>
-              
-              <div className="absolute -left-8 top-1/2 -translate-y-1/2 bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-wildlife-emerald">5+ Years</div>
-                <div className="text-xs text-muted-foreground">Watching the "Elephas maximus"</div>
               </div>
               
               <div className="absolute -bottom-4 -left-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-gold/20 backdrop-blur-sm">
