@@ -119,7 +119,7 @@ const HeroSection = () => {
                 <div className="text-xs text-muted-foreground">Research Field Interviews</div>
               </div>
               
-              <div className="absolute -bottom-4 -right-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
+              <div className="absolute -left-8 top-1/2 -translate-y-1/2 bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
                 <div className="text-2xl font-bold text-wildlife-emerald">5+ Years</div>
                 <div className="text-xs text-muted-foreground">Watching the "Elephas maximus"</div>
               </div>
