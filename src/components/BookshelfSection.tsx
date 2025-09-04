@@ -76,7 +76,7 @@ const BookshelfSection = () => {
             <BookOpen className="h-8 w-8 text-wildlife-gold" />
             <h2 className="text-4xl lg:text-5xl font-bold">
               <span className="text-wildlife-ivory">The Little</span>{" "}
-              <span className="text-glow wildlife-gradient bg-clip-text text-transparent">Book Club</span>
+              <span className="text-wildlife-emerald">Book Club</span>
             </h2>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

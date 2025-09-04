@@ -47,10 +47,10 @@ const AboutSection = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <div>
-                <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-                  <span className="text-wildlife-ivory">About</span>{" "}
-                  <span className="text-glow wildlife-gradient bg-clip-text text-transparent">Simran</span>
-                </h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+            <span className="text-wildlife-ivory">About</span>{" "}
+            <span className="text-wildlife-emerald">Simran</span>
+          </h2>
                 <div className="w-24 h-1 wildlife-gradient rounded-full" />
               </div>
               

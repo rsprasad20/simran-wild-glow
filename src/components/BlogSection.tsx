@@ -70,7 +70,7 @@ const BlogSection = () => {
             <BookOpen className="h-8 w-8 text-wildlife-emerald" />
             <h2 className="text-4xl lg:text-5xl font-bold">
               <span className="text-wildlife-ivory">Thoughts &</span>{" "}
-              <span className="text-glow wildlife-gradient bg-clip-text text-transparent">Reflections</span>
+              <span className="text-wildlife-emerald">Reflections</span>
             </h2>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">

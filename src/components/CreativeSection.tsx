@@ -68,7 +68,7 @@ const CreativeSection = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             <span className="text-wildlife-ivory">Creative</span>{" "}
-            <span className="text-glow wildlife-gradient bg-clip-text text-transparent">Expression</span>
+            <span className="text-wildlife-emerald">Expression</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Beyond research and conservation, creativity fuels my passion. From street dance to photography, 

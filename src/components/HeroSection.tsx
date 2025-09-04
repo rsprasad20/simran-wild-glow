@@ -41,7 +41,7 @@ const HeroSection = () => {
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="text-wildlife-ivory">Dr. Simran</span>
                 <br />
-                <span className="text-glow wildlife-gradient bg-clip-text text-transparent">Prasad</span>
+                <span className="text-wildlife-emerald">Prasad</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-wildlife-emerald font-medium">
