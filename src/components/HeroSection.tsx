@@ -113,8 +113,8 @@ const HeroSection = () => {
               
               {/* Floating Data Points */}
               <div className="absolute -top-4 -right-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-wildlife-emerald">500*</div>
-                <div className="text-xs text-muted-foreground">Research Products</div>
+                <div className="text-2xl font-bold text-wildlife-emerald">500+</div>
+                <div className="text-xs text-muted-foreground">Research Field Interviews</div>
               </div>
               
               <div className="absolute -bottom-4 -left-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-gold/20 backdrop-blur-sm">
