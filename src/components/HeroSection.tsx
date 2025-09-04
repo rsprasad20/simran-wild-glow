@@ -85,7 +85,7 @@ const HeroSection = () => {
                 <Linkedin className="h-5 w-5 text-wildlife-emerald group-hover:text-wildlife-ivory" />
               </a>
               <a 
-                href="mailto:simran@example.com"
+                href="mailto:simranprasaduae@gmail.com"
                 className="p-3 rounded-full bg-wildlife-emerald/10 border border-wildlife-emerald/20 hover:bg-wildlife-emerald/20 smooth-transition group"
               >
                 <Mail className="h-5 w-5 text-wildlife-emerald group-hover:text-wildlife-ivory" />

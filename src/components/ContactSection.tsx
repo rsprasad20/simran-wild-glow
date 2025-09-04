@@ -149,7 +149,7 @@ const ContactSection = () => {
                   </a>
                   
                   <a 
-                    href="mailto:simran@example.com"
+                    href="mailto:simranprasaduae@gmail.com"
                     className="flex items-center gap-4 p-4 rounded-xl bg-wildlife-gold/5 hover:bg-wildlife-gold/10 smooth-transition border border-wildlife-gold/20 group"
                   >
                     <div className="p-3 rounded-xl bg-wildlife-gold/10 group-hover:bg-wildlife-gold/20 smooth-transition">
