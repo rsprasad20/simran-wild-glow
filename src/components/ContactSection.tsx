@@ -162,7 +162,7 @@ const ContactSection = () => {
                   </a>
                   
                   <a 
-                    href="https://www.instagram.com/simran__prasad/"
+                    href="https://www.instagram.com/simran__prasad/?igsh=MXR3N3FjaXZkZTdsZg%3D%3D#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 p-4 rounded-xl bg-wildlife-emerald/5 hover:bg-wildlife-emerald/10 smooth-transition border border-wildlife-emerald/20 group"

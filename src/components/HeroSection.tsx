@@ -91,7 +91,7 @@ const HeroSection = () => {
                 <Mail className="h-5 w-5 text-wildlife-emerald group-hover:text-wildlife-ivory" />
               </a>
               <a 
-                href="https://www.instagram.com/simran__prasad/"
+                href="https://www.instagram.com/simran__prasad/?igsh=MXR3N3FjaXZkZTdsZg%3D%3D#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-full bg-wildlife-emerald/10 border border-wildlife-emerald/20 hover:bg-wildlife-emerald/20 smooth-transition group"
