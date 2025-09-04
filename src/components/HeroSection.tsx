@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import heroConstellation from "@/assets/hero-constellation.jpg";
-import simranPortrait from "@/assets/simran-portrait.jpg";
 
 const HeroSection = () => {
   const scrollToAbout = () => {
@@ -106,8 +105,8 @@ const HeroSection = () => {
               <div className="absolute inset-0 wildlife-gradient rounded-full blur-3xl opacity-20 scale-110" />
               <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-wildlife-emerald/20 glow-pulse">
                 <img 
-                  src={simranPortrait}
-                  alt="Dr. Simran Prasad - Wildlife Conservation PhD"
+                  src="/lovable-uploads/52416314-c6ac-48f6-8676-ee6bf3ac1d27.png"
+                  alt="Dr. Simran Prasad - Wildlife Conservation Doctoral Fellow in traditional outfit with warm smile"
                   className="w-full h-full object-cover"
                 />
               </div>
