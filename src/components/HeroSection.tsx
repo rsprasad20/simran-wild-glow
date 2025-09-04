@@ -45,7 +45,7 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-wildlife-emerald font-medium">
-                Doctoral Fellow | Wildlife Conservationist | Storyteller
+                PhD in Wildlife Conservation | Wildlife Conservationist | Storyteller
               </p>
             </div>
             
