@@ -1,42 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Dr. Simran Prasad - Wildlife Conservation Personal Brand Design System */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Brand Colors - Nature-inspired with professional depth */
+    --background: 220 13% 5%;          /* Deep charcoal black */
+    --foreground: 45 20% 95%;          /* Soft ivory white */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 220 13% 8%;                /* Slightly lighter black for cards */
+    --card-foreground: 45 20% 95%;     /* Soft ivory for card text */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 220 13% 8%;
+    --popover-foreground: 45 20% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Nature-inspired Primary Palette */
+    --primary: 158 68% 45%;             /* Emerald green - wildlife/nature */
+    --primary-foreground: 220 13% 5%;   /* Dark text on emerald */
+    --primary-glow: 158 68% 65%;        /* Lighter emerald for glows */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Golden Accent - sunset/warmth */
+    --secondary: 43 74% 66%;            /* Warm golden yellow */
+    --secondary-foreground: 220 13% 5%; /* Dark text on gold */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Subtle Nature Tones */
+    --muted: 220 13% 15%;               /* Muted dark for backgrounds */
+    --muted-foreground: 45 15% 70%;     /* Muted ivory for less important text */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 158 68% 15%;              /* Deep forest green for accents */
+    --accent-foreground: 45 20% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 20% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 13% 20%;              /* Subtle borders */
+    --input: 220 13% 15%;               /* Input backgrounds */
+    --ring: 158 68% 45%;                /* Focus rings in emerald */
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Wildlife Brand Colors */
+    --wildlife-emerald: 158 68% 45%;    /* Main brand green */
+    --wildlife-gold: 43 74% 66%;        /* Accent gold */
+    --wildlife-ivory: 45 20% 95%;       /* Text white */
+    --wildlife-forest: 158 68% 15%;     /* Deep green */
+    --wildlife-midnight: 220 13% 5%;    /* Deep black */
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--wildlife-midnight)), hsl(var(--wildlife-forest)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)) 0%, hsl(220 13% 10%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(var(--wildlife-emerald)), hsl(var(--wildlife-gold)));
+
+    /* Shadows & Glows */
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--wildlife-emerald) / 0.3);
+    --shadow-glow: 0 0 40px hsl(var(--wildlife-emerald) / 0.2);
+    --shadow-golden-glow: 0 0 30px hsl(var(--wildlife-gold) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-gentle: all 0.3s ease-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +125,115 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer utilities {
+  /* Wildlife Brand Animations & Effects */
+  .wildlife-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .golden-glow {
+    box-shadow: var(--shadow-golden-glow);
+  }
+  
+  .wildlife-gradient {
+    background: var(--gradient-accent);
+  }
+  
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .smooth-transition {
+    transition: var(--transition-smooth);
+  }
+  
+  .gentle-transition {
+    transition: var(--transition-gentle);
+  }
+  
+  /* Constellation Animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+  }
+  
+  @keyframes glow-pulse {
+    0%, 100% { 
+      box-shadow: 0 0 20px hsl(var(--wildlife-emerald) / 0.3);
+    }
+    50% { 
+      box-shadow: 0 0 40px hsl(var(--wildlife-emerald) / 0.6);
+    }
+  }
+  
+  @keyframes book-hover {
+    0% { transform: translateY(0px) rotateY(0deg); }
+    100% { transform: translateY(-10px) rotateY(15deg); }
+  }
+  
+  @keyframes wildlife-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  
+  .book-hover {
+    transition: transform 0.3s ease;
+  }
+  
+  .book-hover:hover {
+    animation: book-hover 0.3s ease forwards;
+  }
+  
+  .wildlife-shimmer {
+    background: linear-gradient(90deg, transparent, hsl(var(--wildlife-emerald) / 0.1), transparent);
+    background-size: 200% 100%;
+    animation: wildlife-shimmer 2s ease-in-out infinite;
+  }
+  
+  /* Text Glow Effects */
+  .text-glow {
+    text-shadow: 0 0 20px hsl(var(--wildlife-emerald) / 0.5);
+  }
+  
+  .text-golden-glow {
+    text-shadow: 0 0 20px hsl(var(--wildlife-gold) / 0.5);
+  }
+  
+  /* Custom Scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--primary-glow));
   }
 }

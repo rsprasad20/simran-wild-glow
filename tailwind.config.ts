@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -26,7 +30,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -51,6 +56,13 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				wildlife: {
+					emerald: 'hsl(var(--wildlife-emerald))',
+					gold: 'hsl(var(--wildlife-gold))',
+					ivory: 'hsl(var(--wildlife-ivory))',
+					forest: 'hsl(var(--wildlife-forest))',
+					midnight: 'hsl(var(--wildlife-midnight))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
