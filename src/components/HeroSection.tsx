@@ -54,6 +54,11 @@ const HeroSection = () => {
               to understand and protect our planet's most vulnerable ecosystems.
             </p>
             
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-wildlife-gold/10 border border-wildlife-gold/20 backdrop-blur-sm">
+              <div className="w-2 h-2 bg-wildlife-gold rounded-full animate-pulse" />
+              <span className="text-sm font-medium text-wildlife-gold">5+ years of watching the Indian Elephants in its natural habitat</span>
+            </div>
+            
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
