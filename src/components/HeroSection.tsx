@@ -128,7 +128,7 @@ const HeroSection = () => {
               </div>
               
               <div className="absolute -bottom-4 -left-4 bg-card-gradient rounded-2xl p-4 border border-wildlife-gold/20 backdrop-blur-sm">
-                <div className="text-2xl font-bold text-wildlife-gold">3+ States</div>
+                <div className="text-2xl font-bold text-wildlife-gold">3+ Indian States</div>
                 <div className="text-xs text-muted-foreground">Study site across the western ghats</div>
               </div>
             </div>
