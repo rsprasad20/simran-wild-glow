@@ -116,9 +116,17 @@ const AboutSection = () => {
                       <h3 className="text-lg font-semibold text-wildlife-ivory mb-2">
                         {achievement.title}
                       </h3>
-                      <p className="text-muted-foreground">
-                        {achievement.description}
-                      </p>
+                      {achievement.title === "Conservation Impact" ? (
+                        <ul className="text-muted-foreground space-y-1">
+                          <li>• New York Academy of Science's Mentor for the 1000 Girls, 1000 Futures Program.</li>
+                          <li>• Fellow at the Center for Collaborative Conservation (CCC) at Colorado State University.</li>
+                          <li>• Keynote speaker at the 60th Annual Meeting of the Association for Tropical Biology and Conservation (ATBC) in Kigali, Rwanda</li>
+                        </ul>
+                      ) : (
+                        <p className="text-muted-foreground">
+                          {achievement.description}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </CardContent>
