@@ -1,9 +1,58 @@
+import { useState } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { CalendarDays, Clock, ArrowRight, BookOpen } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const BlogSection = () => {
+  const [email, setEmail] = useState("");
+  const [isSubscribing, setIsSubscribing] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      toast({
+        title: "Error",
+        description: "Please enter your email address",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubscribing(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('newsletter-subscribe', {
+        body: { email: email.trim() }
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      toast({
+        title: "Success!",
+        description: "You've been subscribed to the newsletter",
+      });
+      setEmail("");
+    } catch (error: any) {
+      console.error('Subscription error:', error);
+      const errorMessage = error.message || "Failed to subscribe. Please try again.";
+      toast({
+        title: "Error",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubscribing(false);
+    }
+  };
+
   const blogPosts = [
     {
       title: "AI in Wildlife Conservation: A New Frontier",
@@ -217,16 +266,23 @@ const BlogSection = () => {
               Get notified when I publish new insights on wildlife conservation, AI research, 
               and stories from the field. No spam, just thoughtful content.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
+            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <Input
                 type="email" 
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="flex-1 px-4 py-3 rounded-lg bg-wildlife-midnight/50 border border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:outline-none focus:border-wildlife-emerald"
+                disabled={isSubscribing}
               />
-              <Button className="wildlife-gradient hover:opacity-90 smooth-transition text-wildlife-midnight font-medium px-6">
-                Subscribe
+              <Button 
+                type="submit"
+                disabled={isSubscribing}
+                className="wildlife-gradient hover:opacity-90 smooth-transition text-wildlife-midnight font-medium px-6"
+              >
+                {isSubscribing ? "Subscribing..." : "Subscribe"}
               </Button>
-            </div>
+            </form>
           </CardContent>
         </Card>
       </div>
