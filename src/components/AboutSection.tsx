@@ -6,7 +6,8 @@ const AboutSection = () => {
   const skills = [
     "Wildlife Conservation", "Data Science", "AI Research", "Field Biology",
     "Python", "R", "Machine Learning", "Statistical Analysis", 
-    "Research Writing", "Grant Writing", "Photography", "Storytelling"
+    "Research Writing", "Grant Writing", "Photography", "Storytelling",
+    "QGIS Maps", "Science Publications"
   ];
 
   const achievements = [
