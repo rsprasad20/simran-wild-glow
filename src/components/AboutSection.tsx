@@ -12,8 +12,8 @@ const AboutSection = () => {
   const achievements = [
     {
       icon: GraduationCap,
-      title: "Doctoral Fellowship",
-      description: "PhD in Wildlife Conservation with focus on AI applications",
+      title: "PhD in Wildlife Conservation",
+      description: "PhD in Wildlife Conservation with a focus on Human Elephant Conflict (HEC)",
       color: "text-wildlife-emerald"
     },
     {
@@ -55,7 +55,7 @@ const AboutSection = () => {
               </div>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                As a Doctoral Fellow in Wildlife Conservation, I stand at the intersection of nature and technology, 
+                As a PhD candidate in Wildlife Conservation with a focus on Human Elephant Conflict (HEC), I stand at the intersection of nature and technology, 
                 using data science and AI to unlock the secrets of wildlife behavior and ecosystem dynamics.
               </p>
               
