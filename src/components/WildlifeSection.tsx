@@ -50,11 +50,10 @@ const WildlifeSection = () => {
   ];
 
   const timeline = [
-    { year: "2024", event: "Lead Researcher - AI Wildlife Conservation Lab" },
-    { year: "2023", event: "Published 'Machine Learning in Conservation Biology'" },
-    { year: "2022", event: "Awarded Young Conservationist Fellowship" },
-    { year: "2021", event: "Started PhD in Wildlife Conservation" },
-    { year: "2020", event: "Fieldwork Coordinator - Tiger Conservation Project" }
+    { year: "2025", event: "Post Doctoral Researcher - Centre for Wildlife Studies" },
+    { year: "2020", event: "Doctoral Researcher - Centre for Wildlife Studies" },
+    { year: "2019", event: "Master of Science Ecology, Evolution & Conservation - Imperial College of London" },
+    { year: "2016", event: "Bachelor of Science Zoology with Marine Zoology - Bangor University" }
   ];
 
   return (
