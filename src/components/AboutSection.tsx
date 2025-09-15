@@ -19,7 +19,7 @@ const AboutSection = () => {
     {
       icon: Microscope,
       title: "Research Excellence",
-      description: "15+ peer-reviewed publications in conservation biology",
+      description: "5+ peer-reviewed publications in conservation biology",
       color: "text-wildlife-gold"
     },
     {
