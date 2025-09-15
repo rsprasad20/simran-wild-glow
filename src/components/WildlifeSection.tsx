@@ -2,9 +2,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { MapPin, Calendar, Users, Award, ExternalLink } from "lucide-react";
+import { useState } from "react";
 import wildlifeWork from "@/assets/wildlife-work.jpg";
+import WildlifeGallery from "./WildlifeGallery";
 
 const WildlifeSection = () => {
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
+  
   const projects = [
     {
       title: "Tiger Habitat Mapping with AI",
@@ -87,6 +91,7 @@ const WildlifeSection = () => {
               <Button 
                 variant="outline" 
                 className="border-wildlife-emerald/30 text-wildlife-ivory hover:bg-wildlife-emerald/10"
+                onClick={() => setIsGalleryOpen(true)}
               >
                 View Gallery
                 <ExternalLink className="ml-2 h-4 w-4" />
@@ -221,6 +226,11 @@ const WildlifeSection = () => {
           </Card>
         </div>
       </div>
+      
+      <WildlifeGallery 
+        isOpen={isGalleryOpen} 
+        onClose={() => setIsGalleryOpen(false)} 
+      />
     </section>
   );
 };
