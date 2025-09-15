@@ -31,7 +31,7 @@ const AboutSection = () => {
     {
       icon: Heart,
       title: "Conservation Impact",
-      description: "Contributed to 3 successful species recovery programs",
+      description: "• New York Academy of Science's Mentor for the 1000 Girls, 1000 Futures Program. • Fellow at the Center for Collaborative Conservation (CCC) at Colorado State University. • Keynote speaker at the 60th Annual Meeting of the Association for Tropical Biology and Conservation (ATBC) in Kigali, Rwanda",
       color: "text-wildlife-gold"
     }
   ];
