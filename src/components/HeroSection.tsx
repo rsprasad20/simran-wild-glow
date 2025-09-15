@@ -58,7 +58,7 @@ const HeroSection = () => {
             <div className="flex justify-center lg:justify-start mb-4">
               <div className="bg-card-gradient rounded-2xl p-4 border border-wildlife-emerald/20 backdrop-blur-sm">
                 <div className="text-2xl font-bold text-wildlife-emerald">5+ Years</div>
-                <div className="text-xs text-muted-foreground">Watching the "Elephas maximus"</div>
+                <div className="text-xs text-muted-foreground">Watching the magnificent "Elephas Maximus" in India</div>
               </div>
             </div>
             
