@@ -8,6 +8,11 @@ import tigerImage from "@/assets/gallery/tiger.jpg";
 import elephantsImage from "@/assets/gallery/elephants.jpg";
 import pangolinImage from "@/assets/gallery/pangolin.jpg";
 import pigeonsImage from "@/assets/gallery/pigeons.jpg";
+import sparrowsImage from "@/assets/gallery/sparrows.jpg";
+import gaurImage from "@/assets/gallery/gaur.jpg";
+import bisonImage from "@/assets/gallery/bison.jpg";
+import wildDogsImage from "@/assets/gallery/wild-dogs.jpg";
+import hyenasImage from "@/assets/gallery/hyenas.jpg";
 
 interface WildlifeGalleryProps {
   isOpen: boolean;
@@ -37,6 +42,31 @@ const WildlifeGallery = ({ isOpen, onClose }: WildlifeGalleryProps) => {
       src: pigeonsImage,
       title: "Urban Pigeons",
       description: "Pigeons adapting to urban environments"
+    },
+    {
+      src: sparrowsImage,
+      title: "House Sparrows",
+      description: "Common sparrows in their natural habitat"
+    },
+    {
+      src: gaurImage,
+      title: "Indian Gaur",
+      description: "Massive wild bison in forest clearing"
+    },
+    {
+      src: bisonImage,
+      title: "American Bison",
+      description: "Powerful bison grazing in grasslands"
+    },
+    {
+      src: wildDogsImage,
+      title: "African Wild Dogs",
+      description: "Endangered wild dogs with distinctive markings"
+    },
+    {
+      src: hyenasImage,
+      title: "Spotted Hyenas",
+      description: "Spotted hyenas in African savanna"
     }
   ];
 
