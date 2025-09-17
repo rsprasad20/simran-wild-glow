@@ -16,6 +16,9 @@ import lionTailedMacaque from "@/assets/gallery/lion-tailed-macaque.jpg";
 import nilgiriTahr from "@/assets/gallery/nilgiri-tahr.jpg";
 import indianWildDog from "@/assets/gallery/indian-wild-dog.jpg";
 import kingCobra from "@/assets/gallery/king-cobra.jpg";
+import indianPangolin from "@/assets/gallery/indian-pangolin.jpg";
+import indianSparrow from "@/assets/gallery/indian-sparrow.jpg";
+import indianPeacock from "@/assets/gallery/indian-peacock.jpg";
 
 interface WildlifeGalleryProps {
   isOpen: boolean;
@@ -85,6 +88,21 @@ const WildlifeGallery = ({ isOpen, onClose }: WildlifeGalleryProps) => {
       src: kingCobra,
       title: "King Cobra",
       description: "King Cobra with spread hood in forest floor"
+    },
+    {
+      src: indianPangolin,
+      title: "Indian Pangolin",
+      description: "Endangered Indian pangolin with distinctive scales"
+    },
+    {
+      src: indianSparrow,
+      title: "House Sparrow",
+      description: "House sparrow perched in natural habitat"
+    },
+    {
+      src: indianPeacock,
+      title: "Indian Peacock",
+      description: "Magnificent Indian peacock with spread tail feathers"
     }
   ];
 
