@@ -3,16 +3,19 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useState } from "react";
 
-// Import wildlife images
-import tigerImage from "@/assets/gallery/tiger.jpg";
-import elephantsImage from "@/assets/gallery/elephants.jpg";
-import pangolinImage from "@/assets/gallery/pangolin.jpg";
-import pigeonsImage from "@/assets/gallery/pigeons.jpg";
-import sparrowsImage from "@/assets/gallery/sparrows.jpg";
-import gaurImage from "@/assets/gallery/gaur.jpg";
-import bisonImage from "@/assets/gallery/bison.jpg";
-import wildDogsImage from "@/assets/gallery/wild-dogs.jpg";
-import hyenasImage from "@/assets/gallery/hyenas.jpg";
+// Import wildlife images - Indian animals from Western Ghats
+import asianElephant1 from "@/assets/gallery/asian-elephant-1.jpg";
+import asianElephant2 from "@/assets/gallery/asian-elephant-2.jpg";
+import bengalTiger from "@/assets/gallery/bengal-tiger.jpg";
+import indianLeopard from "@/assets/gallery/indian-leopard.jpg";
+import indianGaur from "@/assets/gallery/indian-gaur.jpg";
+import slothBear from "@/assets/gallery/sloth-bear.jpg";
+import sambarDeer from "@/assets/gallery/sambar-deer.jpg";
+import malabarSquirrel from "@/assets/gallery/malabar-squirrel.jpg";
+import lionTailedMacaque from "@/assets/gallery/lion-tailed-macaque.jpg";
+import nilgiriTahr from "@/assets/gallery/nilgiri-tahr.jpg";
+import indianWildDog from "@/assets/gallery/indian-wild-dog.jpg";
+import kingCobra from "@/assets/gallery/king-cobra.jpg";
 
 interface WildlifeGalleryProps {
   isOpen: boolean;
@@ -24,49 +27,64 @@ const WildlifeGallery = ({ isOpen, onClose }: WildlifeGalleryProps) => {
 
   const images = [
     {
-      src: tigerImage,
+      src: asianElephant1,
+      title: "Asian Elephant",
+      description: "Majestic Asian elephant in Western Ghats forests"
+    },
+    {
+      src: asianElephant2,
+      title: "Asian Elephant Herd",
+      description: "Asian elephant herd with calves crossing river"
+    },
+    {
+      src: bengalTiger,
       title: "Bengal Tiger",
-      description: "Majestic Bengal tiger in its natural habitat"
+      description: "Magnificent Bengal tiger in Western Ghats forest"
     },
     {
-      src: elephantsImage,
-      title: "Asian Elephants",
-      description: "Herd of Asian elephants with calves"
+      src: indianLeopard,
+      title: "Indian Leopard",
+      description: "Indian leopard resting on tree branch"
     },
     {
-      src: pangolinImage,
-      title: "Pangolin",
-      description: "Endangered pangolin showing distinctive scales"
-    },
-    {
-      src: pigeonsImage,
-      title: "Urban Pigeons",
-      description: "Pigeons adapting to urban environments"
-    },
-    {
-      src: sparrowsImage,
-      title: "House Sparrows",
-      description: "Common sparrows in their natural habitat"
-    },
-    {
-      src: gaurImage,
+      src: indianGaur,
       title: "Indian Gaur",
-      description: "Massive wild bison in forest clearing"
+      description: "Massive Indian Gaur (Indian Bison) in grassland"
     },
     {
-      src: bisonImage,
-      title: "American Bison",
-      description: "Powerful bison grazing in grasslands"
+      src: slothBear,
+      title: "Sloth Bear",
+      description: "Sloth bear climbing tree in Western Ghats forest"
     },
     {
-      src: wildDogsImage,
-      title: "African Wild Dogs",
-      description: "Endangered wild dogs with distinctive markings"
+      src: sambarDeer,
+      title: "Sambar Deer",
+      description: "Sambar deer in forest clearing with large antlers"
     },
     {
-      src: hyenasImage,
-      title: "Spotted Hyenas",
-      description: "Spotted hyenas in African savanna"
+      src: malabarSquirrel,
+      title: "Malabar Giant Squirrel",
+      description: "Colorful Malabar Giant Squirrel in tree canopy"
+    },
+    {
+      src: lionTailedMacaque,
+      title: "Lion-tailed Macaque",
+      description: "Endemic Lion-tailed Macaque in rainforest"
+    },
+    {
+      src: nilgiriTahr,
+      title: "Nilgiri Tahr",
+      description: "Endangered Nilgiri Tahr on rocky mountain cliff"
+    },
+    {
+      src: indianWildDog,
+      title: "Indian Wild Dog (Dhole)",
+      description: "Indian Wild Dog pack in Western Ghats forest"
+    },
+    {
+      src: kingCobra,
+      title: "King Cobra",
+      description: "King Cobra with spread hood in forest floor"
     }
   ];
 
