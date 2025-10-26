@@ -310,7 +310,7 @@ const ContactSection = () => {
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
                     <MapPin className="h-4 w-4 text-wildlife-gold" />
-                    <span className="text-sm text-muted-foreground">Based in India, open to global collaboration</span>
+                    <span className="text-sm text-muted-foreground">Based in Dubai, United Arab Emirates, open to global collaboration</span>
                   </div>
                   <div className="flex gap-2">
                     <Badge className="bg-wildlife-emerald/20 text-wildlife-emerald border-wildlife-emerald/40">
