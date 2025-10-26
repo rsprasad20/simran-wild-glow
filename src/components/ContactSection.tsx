@@ -4,8 +4,51 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Mail, Linkedin, Instagram, MapPin, Calendar, Users, Award } from "lucide-react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { toast } from "sonner";
+
+const contactFormSchema = z.object({
+  name: z.string()
+    .trim()
+    .min(1, "Name is required")
+    .max(100, "Name must be less than 100 characters"),
+  email: z.string()
+    .trim()
+    .email("Invalid email address")
+    .max(255, "Email must be less than 255 characters"),
+  subject: z.string()
+    .trim()
+    .min(1, "Subject is required")
+    .max(200, "Subject must be less than 200 characters"),
+  message: z.string()
+    .trim()
+    .min(1, "Message is required")
+    .max(2000, "Message must be less than 2000 characters"),
+});
+
+type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 const ContactSection = () => {
+  const form = useForm<ContactFormValues>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: "",
+      message: "",
+    },
+  });
+
   const collaborationTypes = [
     {
       title: "Research Collaboration",
@@ -33,10 +76,11 @@ const ContactSection = () => {
     }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted");
+  const onSubmit = (data: ContactFormValues) => {
+    // Form data is now validated and safe to use
+    toast.success("Message sent! I'll get back to you within 48 hours.");
+    form.reset();
+    // TODO: Implement actual form submission (e.g., send to an API endpoint)
   };
 
   return (
@@ -66,41 +110,82 @@ const ContactSection = () => {
               <CardTitle className="text-2xl text-wildlife-ivory">Send a Message</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-wildlife-emerald">Name</label>
-                    <Input 
-                      placeholder="Your name"
-                      className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald"
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <FormField
+                      control={form.control}
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-wildlife-emerald">Name</FormLabel>
+                          <FormControl>
+                            <Input 
+                              placeholder="Your name"
+                              className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      control={form.control}
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel className="text-wildlife-emerald">Email</FormLabel>
+                          <FormControl>
+                            <Input 
+                              type="email"
+                              placeholder="your.email@example.com"
+                              className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald"
+                              {...field}
+                            />
+                          </FormControl>
+                          <FormMessage />
+                        </FormItem>
+                      )}
                     />
                   </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium text-wildlife-emerald">Email</label>
-                    <Input 
-                      type="email"
-                      placeholder="your.email@example.com"
-                      className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald"
-                    />
-                  </div>
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-wildlife-emerald">Subject</label>
-                  <Input 
-                    placeholder="What would you like to discuss?"
-                    className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald"
+                  
+                  <FormField
+                    control={form.control}
+                    name="subject"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-wildlife-emerald">Subject</FormLabel>
+                        <FormControl>
+                          <Input 
+                            placeholder="What would you like to discuss?"
+                            className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
-                
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-wildlife-emerald">Message</label>
-                  <Textarea 
-                    placeholder="Tell me about your project, idea, or how we might collaborate..."
-                    rows={6}
-                    className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald resize-none"
+                  
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-wildlife-emerald">Message</FormLabel>
+                        <FormControl>
+                          <Textarea 
+                            placeholder="Tell me about your project, idea, or how we might collaborate..."
+                            rows={6}
+                            className="bg-wildlife-midnight/50 border-wildlife-emerald/20 text-wildlife-ivory placeholder:text-muted-foreground focus:border-wildlife-emerald resize-none"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
                   />
-                </div>
                 
                 <div className="flex gap-3">
                   <Button 
@@ -118,10 +203,11 @@ const ContactSection = () => {
                   </Button>
                 </div>
                 
-                <p className="text-xs text-muted-foreground">
-                  I'll get back to you within 48 hours. For urgent matters, please reach out via LinkedIn.
-                </p>
-              </form>
+                  <p className="text-xs text-muted-foreground">
+                    I'll get back to you within 48 hours. For urgent matters, please reach out via LinkedIn.
+                  </p>
+                </form>
+              </Form>
             </CardContent>
           </Card>
 
