@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Microscope, BarChart3, Heart, BookOpen, Camera } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { GraduationCap, Microscope, BarChart3, Heart, BookOpen, Camera, ExternalLink } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
@@ -124,9 +125,29 @@ const AboutSection = () => {
                           <li>• Keynote speaker at the 60th Annual Meeting of the Association for Tropical Biology and Conservation (ATBC) in Kigali, Rwanda</li>
                         </ul>
                       ) : (
-                        <p className="text-muted-foreground">
-                          {achievement.description}
-                        </p>
+                        <>
+                          <p className="text-muted-foreground">
+                            {achievement.description}
+                          </p>
+                          {achievement.title === "Research Excellence" && (
+                            <Button
+                              variant="outline"
+                              size="sm"
+                              className="mt-4 border-wildlife-emerald/30 hover:bg-wildlife-emerald/10"
+                              asChild
+                            >
+                              <a 
+                                href="https://scholar.google.com/citations?user=Z4TdQSYAAAAJ&hl=en" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="flex items-center gap-2"
+                              >
+                                Read My Research
+                                <ExternalLink className="h-4 w-4" />
+                              </a>
+                            </Button>
+                          )}
+                        </>
                       )}
                     </div>
                   </div>
