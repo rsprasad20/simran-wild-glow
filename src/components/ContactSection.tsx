@@ -317,7 +317,7 @@ const ContactSection = () => {
                       Accepting Research Partnerships
                     </Badge>
                     <Badge className="bg-wildlife-gold/20 text-wildlife-gold border-wildlife-gold/40">
-                      Speaking Engagements Available
+                      Available for Speaking Engagements
                     </Badge>
                   </div>
                 </div>
