@@ -137,8 +137,8 @@ const AboutSection = () => {
                               asChild
                             >
                               <a 
-                                href="https://scholar.google.com/citations?user=Z4TdQSYAAAAJ&hl=en" 
-                                target="_blank" 
+                                href="https://www.nature.com/articles/s41598-025-14867-3" 
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-center gap-2"
                               >
