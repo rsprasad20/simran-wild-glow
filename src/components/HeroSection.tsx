@@ -77,8 +77,15 @@ const HeroSection = () => {
                 variant="outline" 
                 size="lg"
                 className="border-wildlife-emerald/30 text-wildlife-ivory hover:bg-wildlife-emerald/10 smooth-transition px-8 py-3"
+                asChild
               >
-                Read My Research
+                <a 
+                  href="https://www.nature.com/articles/s41598-025-14867-3" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read My Research
+                </a>
               </Button>
             </div>
             
