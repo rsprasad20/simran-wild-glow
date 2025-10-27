@@ -74,9 +74,8 @@ const HeroSection = () => {
               </Button>
               
               <Button 
-                variant="outline" 
                 size="lg"
-                className="border-wildlife-emerald/30 text-wildlife-ivory hover:bg-wildlife-emerald/10 smooth-transition px-8 py-3"
+                className="wildlife-gradient hover:opacity-90 smooth-transition text-wildlife-midnight font-medium px-8 py-3"
                 asChild
               >
                 <a 
