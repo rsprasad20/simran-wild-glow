@@ -187,7 +187,7 @@ const AboutSection = () => {
                         className="flex items-center gap-2"
                       >
                         <Youtube className="h-4 w-4" />
-                        Watch My Journey
+                        Imperial College London
                       </a>
                     </Button>
                   </div>
