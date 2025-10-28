@@ -174,22 +174,20 @@ const AboutSection = () => {
                     <p className="text-muted-foreground mb-4">
                       Imperial College London - Where science meets innovation
                     </p>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="border-wildlife-gold/30 hover:bg-wildlife-gold/10"
-                      asChild
+                    <a 
+                      href="https://www.youtube.com/shorts/VzKPbVYGNu8" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <a 
-                        href="https://www.youtube.com/shorts/VzKPbVYGNu8" 
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        className="border-wildlife-gold/30 hover:bg-wildlife-gold/10"
                       >
                         <Youtube className="h-4 w-4" />
                         Imperial College London
-                      </a>
-                    </Button>
+                      </Button>
+                    </a>
                   </div>
                 </div>
               </CardContent>
