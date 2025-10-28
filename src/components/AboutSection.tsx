@@ -1,7 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { GraduationCap, Microscope, BarChart3, Heart, BookOpen, Camera, ExternalLink } from "lucide-react";
+import { GraduationCap, Microscope, BarChart3, Heart, BookOpen, Camera, ExternalLink, Youtube } from "lucide-react";
+import imperialLogo from "@/assets/imperial-logo.png";
 
 const AboutSection = () => {
   const skills = [
@@ -154,6 +155,45 @@ const AboutSection = () => {
                 </CardContent>
               </Card>
             ))}
+            
+            {/* Imperial College Card */}
+            <Card className="bg-card-gradient border-wildlife-gold/20 hover:border-wildlife-gold/40 smooth-transition group">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-2xl bg-white/95 group-hover:bg-white smooth-transition">
+                    <img 
+                      src={imperialLogo} 
+                      alt="Imperial College London" 
+                      className="h-12 w-12 object-contain"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-semibold text-wildlife-ivory mb-2">
+                      A Proud Imperial Alumna
+                    </h3>
+                    <p className="text-muted-foreground mb-4">
+                      Imperial College London - Where science meets innovation
+                    </p>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-wildlife-gold/30 hover:bg-wildlife-gold/10"
+                      asChild
+                    >
+                      <a 
+                        href="https://www.youtube.com/shorts/VzKPbVYGNu8" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2"
+                      >
+                        <Youtube className="h-4 w-4" />
+                        Watch My Journey
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
