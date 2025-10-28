@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Linkedin, Instagram, Youtube, MapPin, Calendar, Users, Award } from "lucide-react";
+import { Mail, Linkedin, Instagram, MapPin, Calendar, Users, Award } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -259,21 +259,6 @@ const ContactSection = () => {
                     <div>
                       <div className="font-medium text-wildlife-ivory">Instagram</div>
                       <div className="text-sm text-muted-foreground">Creative & lifestyle updates</div>
-                    </div>
-                  </a>
-                  
-                  <a 
-                    href="https://www.youtube.com/shorts/VzKPbVYGNu8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 rounded-xl bg-wildlife-gold/5 hover:bg-wildlife-gold/10 smooth-transition border border-wildlife-gold/20 group"
-                  >
-                    <div className="p-3 rounded-xl bg-wildlife-gold/10 group-hover:bg-wildlife-gold/20 smooth-transition">
-                      <Youtube className="h-6 w-6 text-wildlife-gold" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-wildlife-ivory">YouTube</div>
-                      <div className="text-sm text-muted-foreground">Short videos & talks</div>
                     </div>
                   </a>
                 </div>
